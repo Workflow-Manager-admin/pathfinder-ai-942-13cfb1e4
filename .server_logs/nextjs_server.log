@@ -46,3 +46,6 @@ Read more: https://nextjs.org/docs/app/api-reference/config/next-config-js/allow
  GET / 200 in 39ms
  GET / 200 in 42ms
  GET /chat 200 in 13ms
+ GET / 200 in 44ms
+ GET / 200 in 56ms
+ GET /chat 200 in 45ms
