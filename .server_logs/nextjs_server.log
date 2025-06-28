@@ -43,3 +43,6 @@ Read more: https://nextjs.org/docs/app/api-reference/config/next-config-js/allow
  GET /learning-path 200 in 44ms
  GET /projects 200 in 20ms
  GET /projects 200 in 13ms
+ GET / 200 in 39ms
+ GET / 200 in 42ms
+ GET /chat 200 in 13ms
