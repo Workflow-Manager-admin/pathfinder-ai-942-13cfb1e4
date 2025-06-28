@@ -4,11 +4,37 @@
 
  ⨯ Failed to start server
 Error: listen EADDRINUSE: address already in use 0.0.0.0:3000
-    at <unknown> (Error: listen EADDRINUSE: address already in use 0.0.0.0:3000) {
-  code: 'EADDRINUSE',
-  errno: -98,
-  syscall: 'listen',
-  address: '0.0.0.0',
-  port: 3000
-}
-[?25h
+    at <unknown> (Error: listen EADDRINUSE: address ○ Compiling / ...
+ ✓ Compiled / in 3.9s (770 modules)
+ GET / 200 in 4599ms
+ ⚠ Blocked cross-origin request from vscode-internal-05548-beta.beta01.cloud.kavia.ai. To allow this, configure "allowedDevOrigins" in next.config
+Read more: https://nextjs.org/docs/app/api-reference/config/next-config-js/allowedDevOrigins
+ GET / 200 in 89ms
+ GET / 200 in 52ms
+ GET / 200 in 40ms
+ ✓ Compiled /favicon.ico in 311ms (442 modules)
+ GET /favicon.ico 200 in 609ms
+ ✓ Compiled /learning-path in 411ms (777 modules)
+ GET /learning-path 200 in 585ms
+ GET / 200 in 21ms
+ ⚠ Fast Refresh had to perform a full reload. Read more: https://nextjs.org/docs/messages/fast-refresh-reload
+ GET / 200 in 17ms
+ ✓ Compiled /projects in 267ms (784 modules)
+ GET /projects 200 in 322ms
+ GET / 200 in 23ms
+ GET / 200 in 16ms
+ GET /projects 200 in 15ms
+ GET /projects 200 in 11ms
+ ✓ Compiled /chat in 338ms (795 modules)
+ GET /chat 200 in 384ms
+ GET / 200 in 21ms
+ GET / 200 in 17ms
+ GET /chat 200 in 17ms
+ ✓ Compiled /onboarding in 409ms (802 modules)
+ GET /onboarding 200 in 494ms
+ GET / 200 in 28ms
+ GET / 200 in 23ms
+ GET /onboarding 200 in 16ms
+ GET /onboarding 200 in 11ms
+ GET / 200 in 13ms
+ GET /chat 200 in 18ms
