@@ -1,26 +1,155 @@
 @import "tailwindcss";
 
+/* SkillBridge Global Theme Variables */
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --background: #f7fafd;
+  --foreground: #22223b;
+  --primary: #6366f1;
+  --primary-dark: #4338ca;
+  --accent: #e0e7ff;
+  --border-radius: 1rem;
+  --font-sans: var(--font-geist-sans, "Inter", "Segoe UI", Arial, sans-serif);
+  --font-mono: var(--font-geist-mono, "JetBrains Mono", "Menlo", "monospace");
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    --background: #15191b;
+    --foreground: #f2f7fa;
+    --primary: #8b5cf6;
+    --primary-dark: #a78bfa;
+    --accent: #312e81;
   }
 }
 
 body {
-  background: var(--background);
+  background-color: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-sans);
+  min-height: 100vh;
+}
+
+/* App-wide utility tweaks */
+html {
+  scroll-behavior: smooth;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+  background: var(--background);
+}
+::-webkit-scrollbar-thumb {
+  background: #d1d5db;
+  border-radius: 10px;
+}
+@media (prefers-color-scheme: dark) {
+  ::-webkit-scrollbar-thumb {
+    background: #2c3342;
+  }
+}
+
+/* Headings and strong font weights for modern look */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-sans);
+  font-weight: 700;
+  color: var(--primary);
+  letter-spacing: -0.02em;
+}
+h1 { font-size: 2.25rem; line-height: 2.5rem; }
+h2 { font-size: 1.5rem; }
+h3 { font-size: 1.25rem; }
+
+a {
+  color: var(--primary);
+  text-decoration: none;
+  transition: color 0.18s;
+}
+a:hover,
+a:focus {
+  color: var(--primary-dark);
+  text-decoration: underline;
+}
+
+/* Custom input and button styles for forms */
+input, select, textarea {
+  font-family: var(--font-sans);
+}
+
+button {
+  font-family: var(--font-sans);
+  font-weight: 600;
+  border-radius: 9999px;
+  transition: background .15s, color .15s;
+}
+
+/* Card-like containers for clean MVP appearance */
+.bg-card, .card {
+  background: #fff;
+  border-radius: var(--border-radius);
+  box-shadow: 0 2px 8px rgba(80,84,140,0.07);
+  border: 1px solid #f1f5f9;
+}
+
+@media (prefers-color-scheme: dark) {
+  .bg-card, .card {
+    background: #1c2233;
+    border: 1px solid #23263a;
+    color: var(--foreground);
+  }
+}
+
+/* Chip (tag/pill) appearance, utility class for MVP consistency */
+.chip {
+  display: inline-block;
+  background: var(--accent);
+  color: var(--primary-dark);
+  font-size: .85em;
+  padding: 0.15em 0.7em;
+  border-radius: 9999px;
+  font-weight: 500;
+  margin-right: .25em;
+  margin-bottom: .2em;
+}
+
+/* Remove default list markers for consistency */
+ul, ol {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+/* MVP highlight for error and info banners */
+.banner-error {
+  background: #fee2e2;
+  color: #b91c1c;
+  border-radius: 8px;
+  padding: 0.75rem;
+  font-size: 1rem;
+}
+.banner-info {
+  background: #e0e7ff;
+  color: #3730a3;
+  border-radius: 8px;
+  padding: 0.75rem;
+  font-size: 1rem;
+}
+
+/* Utility for sticky nav shadow on scroll */
+.sticky-nav-shadow {
+  box-shadow: 0 2px 8px rgba(80, 84, 140, 0.04);
+}
+
+
+/* Fade animation for new/chat messages */
+@keyframes fade-in-up {
+  from { opacity: 0; transform: translateY(16px);}
+  to { opacity: 1; transform: none;}
+}
+.animate-fade-in-up {
+  animation: fade-in-up 0.28s both;
 }
