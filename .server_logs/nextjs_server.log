@@ -38,3 +38,8 @@ Read more: https://nextjs.org/docs/app/api-reference/config/next-config-js/allow
  GET /onboarding 200 in 11ms
  GET / 200 in 13ms
  GET /chat 200 in 18ms
+ GET / 200 in 104ms
+ GET / 200 in 40ms
+ GET /learning-path 200 in 44ms
+ GET /projects 200 in 20ms
+ GET /projects 200 in 13ms
